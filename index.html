@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+    src="https://kit.fontawesome.com/c7ebe5f55e.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+       <div class="left">
+         <h4>TODO</h4>
+         <button onclick="call_modal()" id="myBtn">+</button>
+
+         <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <input type = "text" class="modal-title" id="titleinp" placeholder="Enter Title" value = ""/>
+                </div>
+                <div class="modal-body">
+                    <textarea id="textbox" placeholder="Enter Your Tasks" value="" >
+                        </textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="addbtn" class="btn btn-default" data-dismiss="modal" onclick="add_task()">ADD</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+       </div>
+
+       <div class="right">
+         <div class="header">
+
+
+        <div
+        class="search-bar"
+      >
+      <i class="fa-solid fa-magnifying-glass m-2"> </i>
+        <input type="search" placeholder="Search.." class="inp" />
+        
+      </div>
+
+      <div class="side-btn">
+        <button onclick="allTask()">ALL(<span style="font-size: 12px;" class="allTasks">0</span>)</button>
+        <button onclick="completedTask()">COMPLETED(<span style="font-size: 12px;" class="completeTasks">0</span>)</button>
+      </div>
+
+    </div>
+
+         <span>Today's Tasks</span>
+         <div id="tasks">
+            
+         </div>
+       </div>
+    </div>
+    <script src="./script.js" ></script>
+</body>
+</html>
